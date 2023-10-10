@@ -1,13 +1,13 @@
 table {
-  border: solid 1px gray;
+  border: solid 1px #dadde0;
   width: 100%;
 }
 
 th {
-  background-color: #acacac;
+  background-color: #AEB2B8;
   color: white;
   padding: 12px 0px;
-  border: solid 1px #dfdfdf;
+  border: solid 1px #dadde0;
 }
 
 tr {
@@ -15,7 +15,7 @@ tr {
 }
 
 td {
-  border: solid 1px #dfdfdf;
+  border: solid 1px #dadde0;
   padding: 9px 0px;
   font-weight: 500;
 }
