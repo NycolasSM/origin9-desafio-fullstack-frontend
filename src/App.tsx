@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { RegisterType, Table } from "./components/Table/";
+import { Table } from "./components/Table/";
 
 export const App = () => {
-  const [data, setData] = useState<RegisterType[]>([]);
+  const [data, setData] = useState<{ [columnKey: string]: string }[]>([]);
   const [columns, setColumns] = useState<{ [columnKey: string]: string }>({});
 
   useEffect(() => {
@@ -29,6 +29,7 @@ export const App = () => {
         cpf: "444-222-333-98",
         endereco: "Rua 2, centro, SP, CEP: 13999-001",
         status: "Inativo",
+        teste: "teste",
       },
     ]);
   }, []);

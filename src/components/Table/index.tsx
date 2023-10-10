@@ -10,7 +10,7 @@ export type RegisterType = {
 
 type Props = {
   columns: { [columnKey: string]: string };
-  data: RegisterType[];
+  data: { [columnKey: string]: string }[];
 };
 
 export const Table = ({ columns, data }: Props) => {
@@ -20,7 +20,7 @@ export const Table = ({ columns, data }: Props) => {
     return (
       <tr key={i}>
         {Object.keys(columns).map((columnKey, j) => (
-          <td key={j}>{registerData[columnKey]}</td>
+          <td key={j}>{registerData[columnKey] || ""}</td>
         ))}
       </tr>
     );
