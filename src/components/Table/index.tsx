@@ -1,4 +1,4 @@
-import React from "react";
+import "./styles.css";
 
 export type RegisterType = {
   nome: string;
@@ -14,5 +14,24 @@ type Props = {
 };
 
 export const Table = ({ columns, data }: Props) => {
-  return <table>Tabela</table>;
+  const tableColumns = Object.values(columns).map((columnLabel, i) => <th key={i}>{columnLabel}</th>);
+
+  const tableRows = data.map((registerData, i) => {
+    return (
+      <tr key={i}>
+        {Object.keys(columns).map((columnKey, j) => (
+          <td key={j}>{registerData[columnKey]}</td>
+        ))}
+      </tr>
+    );
+  });
+
+  return (
+    <table cellSpacing={0}>
+      <thead>
+        <tr>{tableColumns}</tr>
+      </thead>
+      <tbody>{tableRows}</tbody>
+    </table>
+  );
 };
